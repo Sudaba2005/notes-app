@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.sidebar{
+    width: 100%;
+    height: 40vh;
+    border-right: none;
+}
+.mainbar{
+    height: 60vh;
+    padding: 20px;
+}
+.editor-actives{
+    margin-left: -100px;
+}
+#AddNoteTitle{
+   font-size: 20px;
+   flex: 0;
+}
+body.moon-emoji-btn .sidebar{
+    height: 200px;
+}

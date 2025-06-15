@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(max-width: 768px)" href="tablet.css">
+</head>
+<body>
+    <div class = "container">
+        <div class = "sidebar">
+            <div class = "sidebar-header">
+                <div class = "header">
+                    <h1>Notes</h1>
+                    <button class = "moon-emoji-btn" id = "moon-btn">🌙</button>
+                </div>
+                <button class = "new-note-btn" id = "note-btn">+ New Note</button>
+            </div>
+
+            <div class = "notes-list" id = "note-lists">
+                <!-- <div class = "notes active">
+                    <h3>Testing</h3>
+                    <p>3/23/2025</p>
+                </div>
+
+                <div class = "notes ">
+                    <h3>Markdown Test</h3>
+                    <p>3/23/2024</p>
+                </div> -->
+            </div>
+        </div>
+
+
+        <div class = "mainbar">
+            <div class = "main-bar-content">
+                <div class = "note-title">
+                    <input type="text" placeholder="Notes Title" id = "AddNoteTitle">
+                    <div class = "editor-actives">
+                        <button class = "action-btn" id = "saveNotes">Save</button>
+                        <button class = "action-btn delete" id = "deleteNotes">Delete</button>
+                    </div>
+                </div>
+
+                <div class = "edit-preview">
+                    <button class = "tab-btn active" data-tab = "edit">Edit</button>
+                    <button class = "tab-btn" data-tab="preview">Preview</button>
+                </div>
+
+                <div class = "editor-content">
+                    <textarea id="note-content" placeholder="Write your note here (Markdown supported)"></textarea>
+                    <div id = "preview-editor"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/15.0.7/marked.min.js" integrity="sha512-rPuOZPx/WHMHNx2RoALKwiCDiDrCo4ekUctyTYKzBo8NGA79NcTW2gfrbcCL2RYL7RdjX2v9zR0fKyI4U4kPew=="
+     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

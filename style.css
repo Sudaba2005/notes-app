@@ -1,0 +1,232 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container{
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+}
+.sidebar{
+    width: 350px;
+    height: 920px;
+    background-color: #fff;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-header{
+    background-color: #1F51FF;
+    color: white;
+    padding: 20px;
+}
+.sidebar-header h1::before{
+    content: "📝";
+    font-size: 28px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.moon-emoji-btn{
+    background: none;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    padding: 5px;
+    transition: all 0.5s;
+}
+.moon-emoji-btn:hover{
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+}
+.new-note-btn{
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#4169E1;
+    color: white;
+    border: 2px solid #113cbd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.new-note-btn:hover{
+    background-color: #4291e1;
+    transform: translateY(-2px);
+}
+.notes-list{
+    overflow-y: auto;
+}
+.notes{
+  padding: 15px 20px;
+  border-bottom: 1px solid grey;
+  cursor: pointer;
+}
+.notes:hover{
+    background-color: rgb(226, 225, 225);
+}
+.notes h3{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.notes p{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(56, 55, 55);
+}
+.mainbar{
+    padding: 20px;
+    flex: 1;
+    background-color: #f5f5f5;
+}
+.main-bar-content{
+    background-color: #fff;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.1);
+}
+.note-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    border-bottom: 1px solid grey;
+}
+#AddNoteTitle{
+    border: none;
+    outline: none;
+    font-size: 26px;
+    flex: 1;
+    padding-right: 16px;
+}
+.editor-actives{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+.action-btn:not(.delete){
+    font-size: 15px;
+    padding: 6px 19px;
+    border-radius: 4px;
+    border: none;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.action-btn:not(.delete):hover{
+    background-color: #335efb;
+    transform: translateY(-1px);
+}
+.action-btn{
+    font-size: 15px;
+    padding: 6px 19px;
+    border-radius: 4px;
+    border: 2px solid red;
+    color: red;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.action-btn:hover{
+    background-color: red;
+    color: white;
+    transform: translateY(-1px);
+}
+.edit-preview{
+    /* padding: 15px 10px; */
+    padding: 10px 8px 0px 20px;
+    border-bottom: 2px solid grey;
+}
+.tab-btn{
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding-left: 19px;
+    background: none;
+    cursor: pointer;
+}
+.tab-btn.active{
+    color: blue;
+    /* border-bottom-color: blue; */
+    padding: 17px;
+    border-bottom: 2px solid blue;
+}
+.editor-content{
+   flex: 1;
+   position: relative;
+   height: 100vh;
+}
+#note-content,
+#preview-editor{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+#note-content{
+    resize: none;
+    font-size: 17px;
+    border: none;
+    outline: none;
+}
+#preview-editor{
+    display: none;
+    overflow-x: auto;
+}
+
+body.moon-emoji-btn .mainbar{
+    background-color: #1a1a1a;
+}
+body.moon-emoji-btn .sidebar{
+    background-color: #2d2d2d;
+    border-right-color: #404040;
+}
+body.moon-emoji-btn .sidebar-header{
+    background-color: #3d3d3d;
+    border: #3d3d3d;
+}
+body.moon-emoji-btn #moon-btn:hover{
+    background-color: #606060;
+}
+body.moon-emoji-btn .notes{
+    border-bottom-color: #1a1a1a;
+}
+body.moon-emoji-btn .notes:hover{
+    background-color: #606060;
+}
+body.moon-emoji-btn .notes h3{
+    color: white;
+}
+body.moon-emoji-btn .notes p{
+    color: white;
+}
+body.moon-emoji-btn .header h1{
+    font-size: 34px;
+}
+body.moon-emoji-btn .editor-content,
+body.moon-emoji-btn #note-content,
+body.moon-emoji-btn .note-title,
+body.moon-emoji-btn .edit-preview,
+body.moon-emoji-btn #AddNoteTitle{
+    background-color: #2d2d2d;
+}
+body.moon-emoji-btn #AddNoteTitle{
+    color: white;
+}
+body.moon-emoji-btn #note-content,
+body.moon-emoji-btn #preview-editor{
+    color: white;
+}
